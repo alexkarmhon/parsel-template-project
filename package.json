@@ -1,18 +1,20 @@
 {
   "name": "parsel-template-project",
-  "version": "2.0.0",
-  "description": "",
+  "version": "2.0.1",
+  "description": "template",
   "homepage": "https://alexkarmhon.github.io/parsel-template-project",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parsel-template-project/"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /parsel-template-project/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexkarmhon/parsel-template-project.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Olexii <89stigmat89@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexkarmhon/parsel-template-project/issues"
@@ -21,8 +23,9 @@
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.0",
-    "parcel": "^2.6.0",
+    "@parcel/transformer-sass": "^2.11.0",
+    "gh-pages": "^6.1.1",
+    "parcel": "^2.11.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
   },
